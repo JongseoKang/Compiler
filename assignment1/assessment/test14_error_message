@@ -1,0 +1,6 @@
+ERRORS:
+
+Char transpose: cnost -> const
+Char remove: varr -> var
+Char insert: begi -> begin
+Char replace: pront -> print

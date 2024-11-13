@@ -1,0 +1,8 @@
+ERRORS:
+
+Char transpose: namespaec -> namespace
+Char transpose: fucn -> func
+Char remove: beginn -> begin
+Char replace: pront -> print
+Char remove: ende -> end
+Char insert: en -> end

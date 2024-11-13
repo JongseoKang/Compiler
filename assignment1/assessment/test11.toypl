@@ -1,0 +1,5 @@
+func main()
+const abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzzzzzzzzzzaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbcccccccccccccccccccccdddddd := 1, b := 10
+begin
+  skip
+end
