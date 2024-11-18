@@ -1,0 +1,38 @@
+namespace OP
+const add:=1,
+      sub:=2,
+      mul:=3,
+      div:=4
+end
+
+namespace Calc
+  var acc err,
+
+  func init()
+  begin
+    acc<-;
+    err<-0;
+    return acc;
+  end
+
+  func add(x)
+  begin
+    acc <- (acc+x);
+    return acc;
+  end
+
+  func sub(x)
+  begin
+    <- acc-x;
+    return acc;
+  end
+
+end
+
+func main()
+var op, x, r
+begin
+  while (0 == 0) do {
+    print(r)
+  }
+end

@@ -1,0 +1,16 @@
+ERRORS:
+
+Error in line 'LexToken(LIDENT,'err',9,98)'
+Recovered to next COMMA at Line 9.
+Error in line 'LexToken(SEMICOLON,';',13,135)'
+Recovered to next SEMICOLON at Line 14.
+Error in line 'LexToken(RETURN,'return',15,153)'
+Recovered to next SEMICOLON at Line 15.
+Error in line 'LexToken(END,'end',16,167)'
+Recovered to next LPAR at Line 18.
+Error in line 'LexToken(RPAR,')',18,184)'
+Recovered to next LPAR at Line 20.
+Error in line 'LexToken(LIDENT,'acc',20,206)'
+Recovered to next RPAR at Line 20.
+Error in line 'LexToken(ASSIGN,'<-',26,263)'
+Recovered to next SEMICOLON at Line 26.
