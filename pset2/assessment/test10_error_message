@@ -1,6 +1,0 @@
-ERRORS:
-
-Error in line 'LexToken(SEMICOLON,';',5,57)'
-Recovered to next SEMICOLON at Line 6.
-Error in line 'LexToken(ASSIGN,'<-',7,77)'
-Recovered to next SEMICOLON at Line 7.

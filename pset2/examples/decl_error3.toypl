@@ -1,7 +1,0 @@
-# Error message will be like "Error: tester is not declared in this scope"
-
-func main()
-var _
-begin
-  _ <- call tester()
-end

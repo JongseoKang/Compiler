@@ -181,6 +181,8 @@ def p_stmt(p):
     | ident ASSIGN READ
     | PRINT LPAR expr RPAR
     | ident ASSIGN expr
+    | ident ASSIGN term mul factor
+    | ident ASSIGN term div factor
     | ident ASSIGN CALL ident LPAR args RPAR
     | IF bexpr THEN stmt ELSE stmt
     | WHILE bexpr DO stmt
@@ -202,6 +204,8 @@ def p_stmt(p):
             p[0] = ("read", p[1])
         elif p[2]=="<-":
             p[0] = ("assign", p[1], p[3])
+    elif len(p)==6:
+        p[0] = ("assign", p[1], (p[4], p[3], p[5]))
     elif len(p)==8:
         p[0] = ("call", p[1], p[4], p[6])
     elif len(p)==7:
@@ -305,33 +309,55 @@ def p_bfactor(p):
 def p_expr(p):
     """
     expr : term
-    | expr PLUS term
-    | expr MINUS term
+    | expr plus term
+    | expr minus term
     """
     if len(p)==2:
         p[0] = p[1]
-    elif p[2]=="+":
-        p[0] = ("+", p[1], p[3])
-    elif p[2]=="-":
-        p[0] = ("-", p[1], p[3])
+    elif len(p)==4:
+        p[0] = (p[2], p[1], p[3])
+
+def p_plus(p):
+    """
+    plus : PLUS
+    """
+    p[0] = p[1]
+def p_minus(p):
+    """
+    minus : MINUS 
+    """
+    p[0] = p[1]
         
 # TERM -> FACTOR | TERM "*" FACTOR | TERM "/" FACTOR | TERM "%" FACTOR
 def p_term(p):
     """
     term : factor
-    | term MUL factor
-    | term DIV factor
-    | term MOD factor
+    | term mul factor
+    | term div factor
+    | term mod factor
     """
     if len(p)==2:
         p[0] = p[1]
-    elif p[2]=="*":
-        p[0] = ("*", p[1], p[3])
-    elif p[2]=="/":
-        p[0] = ("/", p[1], p[3])
-    elif p[2]=="%":
-        p[0] = ("%", p[1], p[3])
+    elif len(p)==4:
+        p[0] = (p[2], p[1], p[3])
 
+def p_mul(p):
+    """
+    mul : MUL
+    """
+    p[0] = p[1]
+
+def p_div(p):
+    """
+    div : DIV
+    """
+    p[0] = p[1]
+
+def p_mod(p):
+    """
+    mod : MOD
+    """
+    p[0] = p[1]
 # FACTOR -> IDENT | NUMBER | "(" EXPR ")"
 def p_factor(p):
     """

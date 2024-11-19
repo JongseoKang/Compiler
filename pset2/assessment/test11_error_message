@@ -1,8 +1,0 @@
-ERRORS:
-
-Error in line 'LexToken(RPAR,')',1,9)'
-Recovered to next LPAR at Line 2.
-Error in line 'LexToken(LIDENT,'a',2,20)'
-Recovered to next LPAR at Line 2.
-Error in line 'LexToken(RPAR,')',2,22)'
-Recovered to next COMMA at Line 2.

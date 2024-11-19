@@ -1,1 +1,0 @@
-('program', [], [], [], [('func', 'main', [], [], ['a', 'b', 'c', 'd', 'e'], [('assign', ('rel', [], 'a'), ('+', ('number', 1), ('number', 2))), ('assign', ('rel', [], 'b'), ('var', ('rel', [], 'd'))), ('assign', ('rel', [], 'e'), ('+', ('number', 7), ('number', 8)))])])
